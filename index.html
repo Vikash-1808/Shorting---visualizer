@@ -10,23 +10,28 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="sidebar">
-      <select name="" id="selectAlgorithm" class="select-algorithm">
+  <div class="container" role="main">
+    <div class="sidebar" role="complementary" aria-label="Sorting Controls">
+      <label for="selectAlgorithm">Choose Sorting Algorithm</label>
+      <select id="selectAlgorithm" class="select-algorithm" aria-label="Select Sorting Algorithm">
         <option value="bubbleSort" selected>Bubble Sort</option>
-<!--         <option value="selectionSort">Selection Sort</option> -->
-<!--         <option value="quickSort">Quick Sort</option> -->
+        <!-- <option value="selectionSort">Selection Sort</option> -->
+        <!-- <option value="quickSort">Quick Sort</option> -->
       </select>
-      <div class="generate-new">
+
+      <div class="generate-new" role="region" aria-label="Generate New Array Section">
         <p>Generate New Array</p>
-        <input type="number" name="sizeArray" id="numbersBars" max="20" min="1" value="10">
-        <button id="generateBtn">New</button>
+        <label for="numbersBars">Number of bars (1 to 20):</label>
+        <input type="number" name="sizeArray" id="numbersBars" max="20" min="1" value="10" aria-valuemin="1" aria-valuemax="20" aria-valuenow="10">
+        <button id="generateBtn" aria-label="Generate New Array">New</button>
       </div>
-      <div class="buttons">
-        <button id="solveBtn">Solve</button>
+
+      <div class="buttons" role="region" aria-label="Solve Section">
+        <button id="solveBtn" aria-label="Start Sorting Algorithm">Solve</button>
       </div>
     </div>
-    <div class="stage" id="stage"></div>
+
+    <div class="stage" id="stage" role="region" aria-label="Sorting Visualization Stage"></div>
   </div>
 </body>
 
